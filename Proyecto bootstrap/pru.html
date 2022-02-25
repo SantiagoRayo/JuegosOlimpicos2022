@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title> Proyecto Bootstrap</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+
+</head>
+<body>
+  <style>
+  table{
+    margin: auto;
+    width: 50% !important; 
+  }
+    </style>
+    <style>
+    table th{
+      text-align: center; 
+    }
+  </style>
+  <div class="container ">  
+  <br>
+  <div class="table-reponsive">
+  <table style="position: relative; top: 23px; left:600px;width: 200; height: 200px; float: right;" class="table table-bordered table-striped">
+    <
+    <input style="position: relative; left: 70px; width: 530px; float: right;" class="form-control" id="myInput" type="text" placeholder="Search..">
+    <caption>Medallero olimpico</caption>
+    <thead>
+      <tr>
+        <th>Paises</th>
+        <th><i class="fas fa-medal"></i></th>
+        <th><i class="fas fa-medal"></i>
+        <i class="fas fa-medal"></i></th>
+        <th><i class="fas fa-medal"></i>
+        <i class="fas fa-medal"></i>
+        <i class="fas fa-medal"></i></th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>pais</td>
+        <td>oro</td>
+        <td>plata</td>
+        <td>bronce</td>
+        <td>total</td>
+      </tr>
+      <tr>
+        <td>pa</td>
+        <td>or</td>
+        <td>pla</td>
+        <td>bro</td>
+        <td>to</td>
+      </tr>
+      <tr>
+        <td>pa</td>
+        <td>or</td>
+        <td>pla</td>
+        <td>bro</td>
+        <td>to</td>
+      </tr>
+      <tr>
+        <td>pa</td>
+        <td>or</td>
+        <td>pla</td>
+        <td>bro</td>
+        <td>to</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</div>
+    </div>
+</body>
+</html>
